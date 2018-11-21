@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zGJ-2p-AdQ">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="ztd-VA-E6X">
+            <objects>
+                <viewController id="zGJ-2p-AdQ" customClass="DetailViewController" customModule="StoviTheStoryVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VdP-gK-iaF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pA-rG-sHn">
+                                <rect key="frame" x="0.0" y="110.33333333333331" width="375" height="200"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Gnu-dd-Dff"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-Z6-Ga1">
+                                <rect key="frame" x="9.9999999999999964" y="69" width="61.666666666666657" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEG-7O-F3j">
+                                <rect key="frame" x="0.0" y="310.33333333333331" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OC-VL-lxz">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.39607843139999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="i5d-Rl-kMH"/>
+                                        </constraints>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="xButtonAction:" destination="zGJ-2p-AdQ" eventType="touchUpInside" id="Ry7-DP-0Df"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-DW-adz">
+                                        <rect key="frame" x="221" y="16" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="chat-bubble"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvj-tV-b2U">
+                                        <rect key="frame" x="175" y="13" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="closed-caption-logo"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-k8-gY8">
+                                        <rect key="frame" x="118" y="11" width="30" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="youtube-play-button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6OC-VL-lxz" firstAttribute="leading" secondItem="UEG-7O-F3j" secondAttribute="leading" id="0Av-RJ-GZ9"/>
+                                    <constraint firstItem="6OC-VL-lxz" firstAttribute="top" secondItem="UEG-7O-F3j" secondAttribute="top" id="UVx-QC-u7Y"/>
+                                    <constraint firstAttribute="height" constant="50" id="vw7-p8-TMA"/>
+                                    <constraint firstAttribute="bottom" secondItem="6OC-VL-lxz" secondAttribute="bottom" id="wP0-WP-Scu"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-EN-2gH">
+                                <rect key="frame" x="10" y="380.33333333333326" width="355" height="387.66666666666674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UEG-7O-F3j" firstAttribute="trailing" secondItem="RTQ-T2-lE9" secondAttribute="trailing" id="5zr-Qi-tDm"/>
+                            <constraint firstItem="7Op-Z6-Ga1" firstAttribute="top" secondItem="RTQ-T2-lE9" secondAttribute="top" constant="25" id="Cvu-GT-dRd"/>
+                            <constraint firstItem="UEG-7O-F3j" firstAttribute="top" secondItem="2pA-rG-sHn" secondAttribute="bottom" id="Ddq-Jg-9RY"/>
+                            <constraint firstItem="RTQ-T2-lE9" firstAttribute="bottom" secondItem="Rhf-EN-2gH" secondAttribute="bottom" constant="10" id="Gyh-vY-jwU"/>
+                            <constraint firstItem="Rhf-EN-2gH" firstAttribute="top" secondItem="UEG-7O-F3j" secondAttribute="bottom" constant="20" id="PaV-Ak-sLG"/>
+                            <constraint firstItem="2pA-rG-sHn" firstAttribute="leading" secondItem="RTQ-T2-lE9" secondAttribute="leading" id="RsG-b2-jIe"/>
+                            <constraint firstItem="7Op-Z6-Ga1" firstAttribute="leading" secondItem="RTQ-T2-lE9" secondAttribute="leading" constant="10" id="VJW-BW-uV9"/>
+                            <constraint firstItem="UEG-7O-F3j" firstAttribute="leading" secondItem="RTQ-T2-lE9" secondAttribute="leading" id="ZQK-fN-C1M"/>
+                            <constraint firstItem="Rhf-EN-2gH" firstAttribute="leading" secondItem="RTQ-T2-lE9" secondAttribute="leading" constant="10" id="Zsq-V0-6gd"/>
+                            <constraint firstItem="2pA-rG-sHn" firstAttribute="trailing" secondItem="RTQ-T2-lE9" secondAttribute="trailing" id="fYI-rI-Ybl"/>
+                            <constraint firstItem="2pA-rG-sHn" firstAttribute="top" secondItem="7Op-Z6-Ga1" secondAttribute="bottom" constant="10" id="p4J-xo-IQs"/>
+                            <constraint firstItem="RTQ-T2-lE9" firstAttribute="trailing" secondItem="Rhf-EN-2gH" secondAttribute="trailing" constant="10" id="rwQ-Tj-rdk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RTQ-T2-lE9"/>
+                    </view>
+                    <connections>
+                        <outlet property="functionView" destination="UEG-7O-F3j" id="XmG-38-rsV"/>
+                        <outlet property="playButton" destination="ysk-k8-gY8" id="zM4-fo-6r9"/>
+                        <outlet property="videoView" destination="2pA-rG-sHn" id="zpX-Vs-QC1"/>
+                        <outlet property="xButtonOutlet" destination="6OC-VL-lxz" id="a0U-ub-Evy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="loN-Cx-w8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat-bubble" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="closed-caption-logo" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="youtube-play-button" width="25.600000381469727" height="25.600000381469727"/>
+    </resources>
+</document>
