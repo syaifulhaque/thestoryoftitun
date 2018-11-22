@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct Story {
+    
+    let title: String
+    let thumbnail: String
+    let description: String
+    
+}
