@@ -14,6 +14,8 @@
 		B18FCE3921A502CC003AF102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18FCE3721A502CC003AF102 /* LaunchScreen.storyboard */; };
 		B18FCE4421A50535003AF102 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18FCE4321A50535003AF102 /* Detail.storyboard */; };
 		B18FCE4621A50547003AF102 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FCE4521A50547003AF102 /* DetailViewController.swift */; };
+		BD1836FB21A6538700479D19 /* MenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1836FA21A6538700479D19 /* MenuTableVC.swift */; };
+		BD1836FD21A6579600479D19 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1836FC21A6579600479D19 /* Struct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B18FCE3A21A502CC003AF102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B18FCE4321A50535003AF102 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		B18FCE4521A50547003AF102 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD1836FA21A6538700479D19 /* MenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableVC.swift; sourceTree = "<group>"; };
+		BD1836FC21A6579600479D19 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Struct.swift; path = StoviTheStoryVideo/Controller/Struct.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		B18FCE4021A504BE003AF102 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD1836FC21A6579600479D19 /* Struct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			children = (
 				B18FCE3021A502CB003AF102 /* ViewController.swift */,
 				B18FCE4521A50547003AF102 /* DetailViewController.swift */,
+				BD1836FA21A6538700479D19 /* MenuTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 			files = (
 				B18FCE4621A50547003AF102 /* DetailViewController.swift in Sources */,
 				B18FCE3121A502CB003AF102 /* ViewController.swift in Sources */,
+				BD1836FB21A6538700479D19 /* MenuTableVC.swift in Sources */,
+				BD1836FD21A6579600479D19 /* Struct.swift in Sources */,
 				B18FCE2F21A502CB003AF102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7J7Y83VMNY;
+				DEVELOPMENT_TEAM = 29G25875TY;
 				INFOPLIST_FILE = StoviTheStoryVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7J7Y83VMNY;
+				DEVELOPMENT_TEAM = 29G25875TY;
 				INFOPLIST_FILE = StoviTheStoryVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

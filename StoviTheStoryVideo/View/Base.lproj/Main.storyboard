@@ -37,7 +37,7 @@
                                     <constraint firstItem="Kz6-ZJ-eyV" firstAttribute="leading" secondItem="kaj-RJ-cku" secondAttribute="leading" constant="15" id="qgs-HS-qbo"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kfK-13-h96">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kfK-13-h96">
                                 <rect key="frame" x="0.0" y="158" width="375" height="654"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="width" constant="375" id="vAw-ju-Tfh"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Menu" rowHeight="175" id="R9g-39-kpV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Menu" rowHeight="175" id="R9g-39-kpV" customClass="MenuTableVC" customModule="StoviTheStoryVideo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9g-39-kpV" id="EUY-li-cJj">
@@ -55,15 +55,28 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9S-OR-fIN">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="174.66666666666666"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OsQ-NR-XDD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174.66666666666666"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman banner" translatesAutoresizingMaskIntoConstraints="NO" id="OsQ-NR-XDD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="375" id="LZk-mc-SoH"/>
+                                                                <constraint firstAttribute="height" constant="172" id="mQI-0X-Q4D"/>
+                                                            </constraints>
                                                         </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou3-gV-hfM">
+                                                            <rect key="frame" x="0.0" y="159.66666666666666" width="375" height="15"/>
+                                                            <color key="backgroundColor" red="0.956676185131073" green="0.93803471326828003" blue="0.88626641035079956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="375" id="BaM-BU-HHx"/>
+                                                                <constraint firstAttribute="height" constant="15" id="crF-Gx-KQG"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="OsQ-NR-XDD" secondAttribute="trailing" id="HVB-RE-tHt"/>
                                                         <constraint firstItem="OsQ-NR-XDD" firstAttribute="top" secondItem="K9S-OR-fIN" secondAttribute="top" id="Ymq-ir-8jr"/>
-                                                        <constraint firstAttribute="bottom" secondItem="OsQ-NR-XDD" secondAttribute="bottom" id="fPl-hU-qtF"/>
+                                                        <constraint firstItem="ou3-gV-hfM" firstAttribute="centerX" secondItem="K9S-OR-fIN" secondAttribute="centerX" id="duA-7O-qnh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ou3-gV-hfM" secondAttribute="bottom" id="ke5-i4-dJ7"/>
                                                         <constraint firstItem="OsQ-NR-XDD" firstAttribute="leading" secondItem="K9S-OR-fIN" secondAttribute="leading" id="rtI-ok-UVU"/>
                                                     </constraints>
                                                 </view>
@@ -75,6 +88,9 @@
                                                 <constraint firstItem="K9S-OR-fIN" firstAttribute="top" secondItem="EUY-li-cJj" secondAttribute="top" id="w83-Kh-fGc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageList" destination="OsQ-NR-XDD" id="I8J-Nx-Djf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -92,6 +108,7 @@
                     <navigationItem key="navigationItem" id="3Dz-Zo-mWa"/>
                     <connections>
                         <outlet property="mainTableView" destination="kfK-13-h96" id="yfv-bJ-A75"/>
+                        <segue destination="Va0-vR-eLA" kind="show" identifier="detail" id="EAL-e1-lRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,4 +142,7 @@
             <point key="canvasLocation" x="60" y="43"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="batman banner" width="352" height="172"/>
+    </resources>
 </document>

@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
+    
+    var array = [ArrayOfData()]
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -20,19 +24,37 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        array = [
+        ArrayOfData(name: "Batman", image: #imageLiteral(resourceName: "batman banner")),
+        ArrayOfData(name: "Batman", image: #imageLiteral(resourceName: "batman banner")),
+        ArrayOfData(name: "Batman", image: #imageLiteral(resourceName: "batman banner")),
+        ArrayOfData(name: "Batman", image: #imageLiteral(resourceName: "batman banner"))
+        ]
+        
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
     }
-
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Menu")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Menu") as! MenuTableVC
+//        cell.imageList = array[indexPath.row].image
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "detail", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 187
     }
     
     
