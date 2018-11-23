@@ -12,7 +12,6 @@ class FrontMenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbnailVideo: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
